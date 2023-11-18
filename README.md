@@ -17,7 +17,7 @@
   <a href="https://github.com/danialhalo/SqliSniper#contributing">Contributing</a> •
 </p>
 
-**SqliSniper** is a robust Python tool designed to detect time-based blind SQL injections in HTTP request headers. It enhances the security assessment process by rapidly scanning and identifying potential vulnerabilities using advanced multi-threaded techniques.
+**SqliSniper** is a robust Python tool designed to detect time-based blind SQL injections in HTTP request headers. It enhances the security assessment process by rapidly scanning and identifying potential vulnerabilities using multi-threaded, ensuring speed and efficiency. Unlike other scanners, SqliSniper is designed to eliminates false positives through and send alerts upon detection, with the built-in Discord notification functionality.
 
 ![alt text](https://raw.githubusercontent.com/danialhalo/SqliSniper/main/screenshot.png)
 
@@ -36,7 +36,7 @@ cd SQLSniper
 chmod +x sqlisniper.py
 pip3 install -r requirements.txt
 ```
-# Usage:
+# Usage
 
 This will display help for the tool. Here are all the options it supports.
 ```
@@ -72,23 +72,23 @@ options:
   --threads THREADS     Number of threads
 ```
 
-# Running SQliSniper
+# Running SqliSniper
 ### Single Url Scan
 The url can be provided with `-u flag` for single site scan
 ```
 ./sqlisniper.py -u http://example.com
 ```
 ### File Input
-This will run the tool with the `-r flag` against all the urls in urls.txt.
+The `-r flag` allows SqliSniper to read a file containing multiple URLs for simultaneous scanning.
 ```
 ./sqlisniper.py -r url.txt
 ```
-### Pipeline
+### piping URLs
 The SqliSniper can also worked with the pipeline input with `-p flag`
 ```
 cat url.txt | ./sqlisniper.py -p
 ```
-This is helpful when integrating with other tools. For example we can use the subfinder , httpx and then pipe the output to SqliSniper for mass scanning
+The pipeline feature facilitates seamless integration with other tools. For instance, you can utilize tools like subfinder and httpx, and then pipe their output to SqliSniper for mass scanning.
 ```
 subfinder -silent -d google.com | sort -u | httpx -silent | ./sqlisniper.py -p
 ```
@@ -105,7 +105,7 @@ ubuntu:~/sqlisniper$ cat payloads.txt
 "0"XOR(if(now()=sysdate()%2Csleep(%__TIME_OUT__%)%2C0))XOR"Z"
 0'XOR(if(now()=sysdate(),sleep(%__TIME_OUT__%),0))XOR'Z
 ```
-### Scanning with single payloads
+### Scanning with Single Payloads
 If you want to only test with the single payload `--single-payload flag` can be used. Make sure to replace the sleep time with `%__TIME_OUT__%`
 ```
 ./sqlisniper.py -r url.txt --single-payload "0'XOR(if(now()=sysdate(),sleep(%__TIME_OUT__%),0))XOR'Z"
@@ -129,6 +129,22 @@ Threads can be defined with `--threads flag`
 ```
 **Note:** It is crucial to consider that **employing a higher number of threads might lead to potential false positives or overlooking valid issues**. Due to the nature of time-based SQL injection it is recommended to use lower thread for more accurate detection.
 
+---
+
+<table>
+<tr>
+<td>
+
+## Legal Disclaimer
+
+Usage of this tool for attacking targets without prior mutual consent is strictly prohibited. It is the end user's responsibility to obey all applicable local, state, and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program..
+
+</td>
+</tr>
+</table>
+
+---
+
 # Contributing
 Contributions to SqliSniper are always welcome. Whether it's feature enhancements, bug fixes, or documentation improvements, every bit of help is appreciated.
 
@@ -136,3 +152,10 @@ Contributions to SqliSniper are always welcome. Whether it's feature enhancement
 # License
 `SqliSniper` is distributed under [MIT License](https://github.com/danialhalo/SqliSniper/blob/main/LICENSE)
 
+---
+
+<div align="center">
+
+`SqliSniper` is made in <img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" alt="python" height="20px" width="20px"> with lots of 💙 by [@Muhammad Danial](https://twitter.com/DanialHalo).
+
+</div>
