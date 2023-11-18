@@ -32,7 +32,7 @@
 ## Installation
 ```
 git clone https://github.com/danialhalo/SqliSniper.git
-cd SQLSniper
+cd SqliSniper
 chmod +x sqlisniper.py
 pip3 install -r requirements.txt
 ```
