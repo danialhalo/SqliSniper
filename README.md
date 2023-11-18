@@ -1,5 +1,25 @@
-# SqliSniper
+<h1 align="center">
+  <img src="logo.png" alt="httpx" width="400px">
+  <br>
+</h1>
+
+<p align="center">
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-_red.svg"></a>
+<a href="https://twitter.com/DanialHalo"><img src="https://img.shields.io/twitter/follow/dan1337.svg?logo=twitter"></a>
+<a href="https://www.linkedin.com/in/dan1337/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=whit"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/danialhalo/SqliSniper#key-features">Features</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="https://github.com/danialhalo/SqliSniper#running-sqlisniper">Running SqliSniper</a> •
+  <a href="https://github.com/danialhalo/SqliSniper#contributing">Contributing</a> •
+</p>
+
 **SqliSniper** is a robust Python tool designed to detect time-based blind SQL injections in HTTP request headers. It enhances the security assessment process by rapidly scanning and identifying potential vulnerabilities using advanced multi-threaded techniques.
+
+![alt text](https://raw.githubusercontent.com/danialhalo/SqliSniper/main/screenshot.png)
 
 ## Key Features
 - **Time-Based Blind SQL Injection Detection:** Pinpoints potential SQL injection vulnerabilities in HTTP headers.
