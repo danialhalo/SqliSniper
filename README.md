@@ -107,5 +107,5 @@ Threads can be defined with `--threads flag`
 ```
  ./sqlisniper.py -r url.txt --threads 10
 ```
-**Note:**It is crucial to consider that **employing a higher number of threads might lead to potential false positives or overlooking valid issues**. Due to the nature of time-based SQL injection it is recommended to use lower thread for more accurate detection.
+**Note:** It is crucial to consider that **employing a higher number of threads might lead to potential false positives or overlooking valid issues**. Due to the nature of time-based SQL injection it is recommended to use lower thread for more accurate detection.
 
