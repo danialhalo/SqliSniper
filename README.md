@@ -19,7 +19,7 @@
 
 **SqliSniper** is a robust Python tool designed to detect time-based blind SQL injections in HTTP request headers. It enhances the security assessment process by rapidly scanning and identifying potential vulnerabilities using multi-threaded, ensuring speed and efficiency. Unlike other scanners, SqliSniper is designed to eliminates false positives through and send alerts upon detection, with the built-in Discord notification functionality.
 
-![alt text](https://raw.githubusercontent.com/danialhalo/SqliSniper/main/screenshot.png)
+![alt text](https://raw.githubusercontent.com/danialhalo/SqliSniper/main/banner.png)
 
 ## Key Features
 - **Time-Based Blind SQL Injection Detection:** Pinpoints potential SQL injection vulnerabilities in HTTP headers.
