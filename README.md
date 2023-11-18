@@ -97,4 +97,15 @@ ubuntu:~/sqlisniper$ cat headers.txt
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
 X-Forwarded-For: 127.0.0.1
 ```
+### Sending Discord Alert Notifications v
+SqliSniper also offers Discord alert notifications, enhancing its functionality by providing real-time alerts through Discord webhooks. This feature proves invaluable during large-scale scans, allowing prompt notifications upon detection.
+```
+./sqlisniper.py -r url.txt --discord <web_hookurl>
+```
+### Multi-Threading 
+Threads can be defined with `--threads flag`
+```
+ ./sqlisniper.py -r url.txt --threads 10
+```
+**Note:**It is crucial to consider that **employing a higher number of threads might lead to potential false positives or overlooking valid issues**. Due to the nature of time-based SQL injection it is recommended to use lower thread for more accurate detection.
 
