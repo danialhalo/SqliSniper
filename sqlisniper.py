@@ -13,6 +13,7 @@ from datetime import datetime
 from termcolor import colored
 from colorama import Fore, Style, init
 import time
+import logging
 
   # Added import for colored text
 
@@ -21,6 +22,8 @@ requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 detected = []
 default_payloads_file = 'payloads.txt'
 default_headers_file = 'headers.txt'
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
 def is_valid_url(url):
     return validators.url(url)
@@ -62,6 +65,7 @@ def validate_sql_injection(url, header, payload, discord_webhook=None, proxy=Non
                 print(colored("[CONFIRMED] Time-base Blind Injection verified", 'green', attrs=['bold']))
                 print(colored(f"    Target: {url}\n    Header: {header}\n    Vector: {payload}", 'green'))
                 print(colored("~~~", 'green'))
+                logger.info(f"{url}|{header}|{payload}")
                 detected.append(url)
                 if discord_webhook:
                     send_discord_notification(discord_webhook, url, headers_15s, payload)
@@ -119,6 +123,7 @@ def main():
     parser.add_argument('-u', '--url', help='Single URL for the target')
     parser.add_argument('-r', '--urls_file', help='File containing a list of URLs')
     parser.add_argument('-p', '--pipeline', action='store_true', help='Read from pipeline')
+    parser.add_argument('-o', '--output', action='store', dest="output_file", help="Output file to write results to", type=str, default=None)
     parser.add_argument('--proxy', help='Proxy for intercepting requests (e.g., http://127.0.0.1:8080)', default=None)
     parser.add_argument('--payload', help='File containing malicious payloads (default is payloads.txt)', default=default_payloads_file)
     parser.add_argument('--single-payload', help='Single payload for testing')
@@ -164,6 +169,12 @@ def main():
 
     headers_file = args.headers
     headers = read_headers_from_file(headers_file)
+
+    if args.output_file:
+        file_handler = logging.FileHandler(args.output_file)
+        file_handler.setFormatter(logging.Formatter('%(message)s'))
+        logger.addHandler(file_handler)
+        logger.info("URL|HEADER|PAYLOAD")
 
     with ThreadPoolExecutor(max_workers=args.threads) as executor:
         print(colored("\n\033[3;93mLegal Disclaimer: Usage of this tool for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state, and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.\033[0m", 'yellow'))
